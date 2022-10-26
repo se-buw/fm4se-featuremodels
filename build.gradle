@@ -22,15 +22,12 @@ dependencies {
 
     // This dependency is used by the application.
     implementation 'com.google.guava:guava:30.1.1-jre'
-    
-    // working with CSV files
-    // https://github.com/eugenp/tutorials/tree/master/libraries-apache-commons-io
-    implementation 'org.apache.commons:commons-csv:1.9.0'
+
 }
 
 application {
     // Define the main class for the application.
-    mainClass = 'de.buw.se4de.App'
+    mainClass = 'de.buw.fm4se.featuremodels.exec.LimbooleExecutor'
 }
 
 run {
