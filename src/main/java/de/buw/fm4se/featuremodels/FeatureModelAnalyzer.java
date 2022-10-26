@@ -14,15 +14,12 @@ import de.buw.fm4se.featuremodels.fm.FeatureModel;
 public class FeatureModelAnalyzer {
 
   public static boolean checkConsistent(FeatureModel fm) {
-    String formula = "a & !a";
+    String formula = FeatureModelTranslator.translateToFormula(fm);
     
-    // TODO implement actual translation of fm to formula
-
     String result;
     try {
       result = LimbooleExecutor.runLimboole(formula, true);
     } catch (Exception e) {
-      // TODO analyze what went wrong and fix your code
       e.printStackTrace();
       return false;
     }
