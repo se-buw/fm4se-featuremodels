@@ -5,6 +5,9 @@ This is a basic template to get started implementing feature model analysis via 
 As part of the assignment you will need to implement the TODOs in [FeatureModelTranslator](https://github.com/se-buw/fm4se-featuremodels/blob/main/src/main/java/de/buw/fm4se/featuremodels/FeatureModelTranslator.java) and [FeatureModelAnalyzer](https://github.com/se-buw/fm4se-featuremodels/blob/main/src/main/java/de/buw/fm4se/featuremodels/FeatureModelAnalyzer.java).
 
 ## Project Setup
+
+[📼 see the project setup video](https://www.youtube.com/watch?v=40MA55S3F8c&list=PLGyeoukah9NYNMJhcHXLjAGN294O2uXCB&index=6)
+
 1. Install OpenJDK/JDK 
 2. Clone the [repository](https://github.com/se-buw/fm4se-featuremodels.git)
 3. Open in any IDE of your choice (e.g. Eclipse, VS Code, etc.)
@@ -22,6 +25,9 @@ electric REQUIRES heating
 ```
 
 ## Task 1
+
+[📼 see the code walk-through and explanation of this task](https://www.youtube.com/watch?v=qa08IzWqSQs&list=PLGyeoukah9NYNMJhcHXLjAGN294O2uXCB&index=7)
+
 For this task, you need to implement the `translateToFormula(FeatureModel fm)` method in [FeatureModelTranslator](https://github.com/se-buw/fm4se-featuremodels/blob/main/src/main/java/de/buw/fm4se/featuremodels/FeatureModelTranslator.java)  which will return the combined formula in _limboole format_ for a given _Feature Model_.
 The translation rules are (as in Lecture Slide 3):
 
@@ -34,9 +40,14 @@ The translation rules are (as in Lecture Slide 3):
 | _p_ is the parent of [1..n] grouped features feature _g1,...,gn_   | p -> (g1 \| ... \|gn) |
 | _p_ is the parent of [1..1] grouped features feature _g1,...,gn_   | p -> 1-of-n (g1,...,gn) |
 
-After a correct translation all JUnit tests relating to consistency checks shold pass.
+After a correct translation all JUnit tests relating to consistency checks should pass.
+
 
 ## Task 2:
+
+[📼 see the code walk-through and explanation of this task](https://www.youtube.com/watch?v=xrLvDfDfRnQ&list=PLGyeoukah9NYNMJhcHXLjAGN294O2uXCB&index=8)
+
+
 - Implement the ``deadFeatureNames(FeatureModel fm)`` method in [FeatureModelAnalyzer](https://github.com/se-buw/fm4se-featuremodels/blob/main/src/main/java/de/buw/fm4se/featuremodels/FeatureModelAnalyzer.java) Class which will compute a (potentially empty) list of all dead features. 
 
 - Implement the ``mandatoryFeatureNames(FeatureModel fm)`` method in [FeatureModelAnalyzer](https://github.com/se-buw/fm4se-featuremodels/blob/main/src/main/java/de/buw/fm4se/featuremodels/FeatureModelAnalyzer.java) Class which will compute a (potentially empty) list of all mandatory features. 
