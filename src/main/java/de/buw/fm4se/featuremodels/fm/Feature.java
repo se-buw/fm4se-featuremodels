@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Feature {
-  private List<Feature> children = new ArrayList<>();
-  private boolean mandatory = false;
   private String name;
+  private boolean mandatory = false;
+  private List<Feature> children = new ArrayList<>();
   private GroupKind childGroupKind = GroupKind.NONE;
 
   public Feature(String name) {

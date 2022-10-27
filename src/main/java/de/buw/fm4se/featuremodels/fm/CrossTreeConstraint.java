@@ -11,8 +11,8 @@ public class CrossTreeConstraint {
   }
 
   private Feature left;
-  private Feature right;
   private Kind kind;
+  private Feature right;
 
   public CrossTreeConstraint(Feature left, Kind kind, Feature right) {
     this.setLeft(left);
