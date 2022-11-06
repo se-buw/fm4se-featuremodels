@@ -13,6 +13,7 @@ public class PrinterExample {
 
   public static void main(String[] args) {
     FeatureModel fm = ExampleFmCreator.getSimpleFm();
+    //FeatureModelTranslator mt = (fm);
     System.out.println(printFeatureModel(fm));
   }
 

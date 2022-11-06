@@ -6,7 +6,12 @@ public class FeatureModelTranslator {
   public static String translateToFormula(FeatureModel fm) {
     
     // TODO implement a real translation
-    
-    return "a & !a";
+	  
+	  
+	  
+	  
+	 
+	  
+	  return "a & !a";
   }
 }
