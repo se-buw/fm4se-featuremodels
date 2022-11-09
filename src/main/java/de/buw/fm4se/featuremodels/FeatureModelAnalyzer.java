@@ -13,36 +13,36 @@ import de.buw.fm4se.featuremodels.fm.FeatureModel;
  */
 public class FeatureModelAnalyzer {
 
-  public static boolean checkConsistent(FeatureModel fm) {
-    String formula = FeatureModelTranslator.translateToFormula(fm);
-    
-    String result;
-    try {
-      result = LimbooleExecutor.runLimboole(formula, true);
-    } catch (Exception e) {
-      e.printStackTrace();
-      return false;
-    }
-    if (result.contains("UNSATISFIABLE")) {
-      return false;
-    }
-    return true;
-  }
+	public static boolean checkConsistent(FeatureModel fm) {
+		String formula = FeatureModelTranslator.translateToFormula(fm);
 
-  public static List<String> deadFeatureNames(FeatureModel fm) {
-    List<String> deadFeatures = new ArrayList<>();
+		String result;
+		try {
+			result = LimbooleExecutor.runLimboole(formula, true);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+		if (result.contains("UNSATISFIABLE")) {
+			return false;
+		}
+		return true;
+	}
 
-    // TODO check for dead features
+	public static List<String> deadFeatureNames(FeatureModel fm) {
+		List<String> deadFeatures = new ArrayList<>();
 
-    return deadFeatures;
-  }
+		// TODO check for dead features
 
-  public static List<String> mandatoryFeatureNames(FeatureModel fm) {
-    List<String> mandatoryFeatures = new ArrayList<>();
+		return deadFeatures;
+	}
 
-    // TODO check for mandatory features
+	public static List<String> mandatoryFeatureNames(FeatureModel fm) {
+		List<String> mandatoryFeatures = new ArrayList<>();
 
-    return mandatoryFeatures;
-  }
+		// TODO check for mandatory features
+
+		return mandatoryFeatures;
+	}
 
 }

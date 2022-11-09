@@ -6,42 +6,42 @@ package de.buw.fm4se.featuremodels.fm;
  * 
  */
 public class CrossTreeConstraint {
-  public enum Kind {
-    REQUIRES, EXCLUDES
-  }
+	public enum Kind {
+		REQUIRES, EXCLUDES
+	}
 
-  private Feature left;
-  private Kind kind;
-  private Feature right;
+	private Feature left;
+	private Kind kind;
+	private Feature right;
 
-  public CrossTreeConstraint(Feature left, Kind kind, Feature right) {
-    this.setLeft(left);
-    this.setKind(kind);
-    this.setRight(right);
-  }
+	public CrossTreeConstraint(Feature left, Kind kind, Feature right) {
+		this.setLeft(left);
+		this.setKind(kind);
+		this.setRight(right);
+	}
 
-  public Feature getLeft() {
-    return left;
-  }
+	public Feature getLeft() {
+		return left;
+	}
 
-  public void setLeft(Feature left) {
-    this.left = left;
-  }
+	public void setLeft(Feature left) {
+		this.left = left;
+	}
 
-  public Feature getRight() {
-    return right;
-  }
+	public Feature getRight() {
+		return right;
+	}
 
-  public void setRight(Feature right) {
-    this.right = right;
-  }
+	public void setRight(Feature right) {
+		this.right = right;
+	}
 
-  public Kind getKind() {
-    return kind;
-  }
+	public Kind getKind() {
+		return kind;
+	}
 
-  public void setKind(Kind kind) {
-    this.kind = kind;
-  }
+	public void setKind(Kind kind) {
+		this.kind = kind;
+	}
 
 }
