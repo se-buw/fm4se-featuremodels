@@ -24,6 +24,9 @@ jobs:
       - name: Copy test files
         run: cp -r fm4se-featuremodels-solution/src/test/* ${{ github.workspace }}/src/test/
       
+      - name: Copy Limboole Executable
+        run: cp -r fm4se-featuremodels-solution/src/main/java/de/buw/fm4se/featuremodels/exec/LimbooleExecutor.java ${{ github.workspace }}/src/main/java/de/buw/fm4se/featuremodels/exec/LimbooleExecutor.java
+      
       - name: Set up Java 17
         uses: actions/setup-java@v2
         with:
