@@ -10,7 +10,7 @@ permissions:
 jobs:
   build:
     name: Autograding
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - name: Checkout Starter Code
         uses: actions/checkout@v2
@@ -20,8 +20,10 @@ jobs:
           repository: se-buw/fm4se-featuremodels-solution
           path: fm4se-featuremodels-solution
           token: ${{ secrets.SOLUTION_REPO_TOKEN }}
+
       - name: Copy test files
-        run: cp -r fm4se-featuremodels-solution/src/test ./src/test
+        run: cp -r fm4se-featuremodels-solution/src/test/* ${{ github.workspace }}/src/test/
+      
       - name: Set up Java 17
         uses: actions/setup-java@v2
         with:

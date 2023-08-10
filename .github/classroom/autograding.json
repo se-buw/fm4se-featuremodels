@@ -3,11 +3,41 @@
     {
       "name": "FeatureModelAnalyzerTest",
       "setup": "chmod +x gradlew",
-      "run": "sudo ./gradlew test",
+      "run": "./gradlew test --tests '*.FeatureModelAnalyzerTest'",
       "input": "",
       "output": "",
       "comparison": "included",
-      "timeout": 10,
+      "timeout": 5,
+      "points": 1
+    },
+    {
+      "name": "FeatureModelAnalyzerDeadFeatureTest",
+      "setup": "chmod +x gradlew",
+      "run": "./gradlew test --tests '*.FeatureModelAnalyzerDeadFeatureTest'",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 5,
+      "points": 1
+    },
+    {
+      "name": "FeatureModelAnalyzerMandatoryFeatureTest",
+      "setup": "chmod +x gradlew",
+      "run": "./gradlew test --tests '*.FeatureModelAnalyzerMandatoryFeatureTest'",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 5,
+      "points": 1
+    },
+    {
+      "name": "FeatureModelAnalyzerTranslationTest",
+      "setup": "chmod +x gradlew",
+      "run": "./gradlew test --tests '*.FeatureModelAnalyzerTranslationTest'",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 5,
       "points": 1
     }
   ]
