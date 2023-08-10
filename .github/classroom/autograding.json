@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "FeatureModelAnalyzerTest",
+      "setup": "chmod +x gradlew",
+      "run": "sudo ./gradlew test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    }
+  ]
+}
