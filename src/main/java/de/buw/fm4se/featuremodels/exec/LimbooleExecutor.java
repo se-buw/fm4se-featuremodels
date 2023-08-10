@@ -16,9 +16,9 @@ public class LimbooleExecutor {
 
   // TODO change this according to your OS
   // windows
-  private static final String LIMBOOLE_EXE = "lib/limboole.exe";
+  // private static final String LIMBOOLE_EXE = "lib/limboole.exe";
   // Linux x86 binary
-  //private static final String LIMBOOLE_EXE = "lib/limboole-linux-x86.exe";
+  private static final String LIMBOOLE_EXE = "lib/limboole-linux-x86.exe";
   // Linux amd64 binary
   //private static final String LIMBOOLE_EXE = "lib/limboole-linux-amd64.exe";
   // Mach-O 64-bit executable x86_64
