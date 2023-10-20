@@ -1,38 +1,65 @@
 name: GitHub Classroom Workflow
 
-on: [push]
+on: 
+  push:
+    branches:
+    - '*'
+    - '!badges'
 
-permissions:
-  checks: write
-  actions: read
-  contents: read
 
 jobs:
   build:
-    name: Autograding
+    name: FM4SE-Exercise-2
     runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]'
     steps:
       - name: Checkout Starter Code
-        uses: actions/checkout@v2
-      - name: Checkout to solution repo
-        uses: actions/checkout@v2
-        with: 
-          repository: se-buw/fm4se-featuremodels-solution
-          path: fm4se-featuremodels-solution
-          token: ${{ secrets.SOLUTION_REPO_TOKEN }}
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-      - name: Copy test files
-        run: cp -r fm4se-featuremodels-solution/src/test/* ${{ github.workspace }}/src/test/
-      
-      - name: Copy Limboole Executable
-        run: cp -r fm4se-featuremodels-solution/src/main/java/de/buw/fm4se/featuremodels/exec/LimbooleExecutor.java ${{ github.workspace }}/src/main/java/de/buw/fm4se/featuremodels/exec/LimbooleExecutor.java
-      
+      - name: Change permission
+        run: chmod a+x lib/limboole-linux-*.exe
+
+      - name: Execute tests
+        run: curl -s https://gist.githubusercontent.com/soaibsafi/b3fba553635c0a8bb44809cbe18efc1c/raw/e8fe6c18ecf38a4748b4fc2cbde6df055ded981c/tests.sh | bash -s
+    
       - name: Set up Java 17
-        uses: actions/setup-java@v2
+        uses: actions/setup-java@v3
         with:
           java-version: '17'
           distribution: 'adopt'
       - name: Display Java version
         run: java -version
       
-      - uses: education/autograding@v1
+      - name: Grading
+        uses: education/autograding@v1
+        id: autograder
+        continue-on-error: true
+      
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+
+      - run: python generate_report.py
+
+      # switch to badges branch
+      - run: git checkout badges || git checkout -b badges
+      
+      # create points bar
+      - name: points bar
+        uses: markpatterson27/points-bar@v1
+        with:
+          points: ${{ steps.autograder.outputs.points }}
+          path: '.github/badges/points-bar.svg'
+
+      # commit and push badges if badges have changed
+      - name: Commit changes to points bar
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add 'report.md'
+          git add '.github/badges/points-bar.svg'
+          git commit -m "Add/Update points bar" || exit 0
+          git push -f origin badges
