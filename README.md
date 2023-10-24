@@ -60,6 +60,9 @@ Some very basic test cases exist. Run the test cases.
 
 In this task you implement an analysis relating two feature models. Your code should check whether all products of one feature model are also products of a second feature model.
 
+- if a feature of the first feature model does not appear in the second, then a product with that feature cannot be a product of the second feature model.
+- if additional features appear in the second feature model, then a product with those features cannot be a product of the first feature model.
+
 Implement the ``checkAllProductsPreserved(FeatureModel fm1, FeatureModel fm2)`` method in [FeatureModelAnalyzer](https://github.com/se-buw/fm4se-featuremodels/blob/main/src/main/java/de/buw/fm4se/featuremodels/FeatureModelAnalyzer.java) Class which will return ``true`` if and only if all products of ``fm1`` are also products of ``fm2`` (we don't care if ``fm2`` has additional products). 
 
 For this, task reuse the formula you get from Task 1.
