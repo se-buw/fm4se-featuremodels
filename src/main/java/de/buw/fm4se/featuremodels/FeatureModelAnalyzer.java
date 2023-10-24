@@ -45,4 +45,11 @@ public class FeatureModelAnalyzer {
     return mandatoryFeatures;
   }
 
+  public static boolean checkAllProductsPreserved(FeatureModel fm1, FeatureModel fm2) {
+
+    // TODO check whether all products of fm1 are also products of fm2
+    
+    return false;    
+  }
+
 }

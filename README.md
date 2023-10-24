@@ -55,3 +55,11 @@ After a correct translation all JUnit tests relating to consistency checks shoul
 For this, reuse the formula you get from Task 1.
 
 Some very basic test cases exist. Run the test cases. 
+
+## Task 3:
+
+In this task you implement an analysis relating two feature models. Your code should check whether all products of one feature model are also products of a second feature model.
+
+Implement the ``checkAllProductsPreserved(FeatureModel fm1, FeatureModel fm2)`` method in [FeatureModelAnalyzer](https://github.com/se-buw/fm4se-featuremodels/blob/main/src/main/java/de/buw/fm4se/featuremodels/FeatureModelAnalyzer.java) Class which will return ``true`` if and only if all products of ``fm1`` are also products of ``fm2`` (we don't care if ``fm2`` has additional products). 
+
+For this, task reuse the formula you get from Task 1.
