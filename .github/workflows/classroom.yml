@@ -9,7 +9,7 @@ on:
 
 jobs:
   build:
-    name: FM4SE-Exercise-2
+    name: FM4SE-Exercise-2 | Feature Model
     runs-on: ubuntu-latest
     if: github.actor != 'github-classroom[bot]'
     steps:
@@ -22,7 +22,7 @@ jobs:
         run: chmod a+x lib/limboole-linux-*.exe
 
       - name: Execute tests
-        run: curl -s https://gist.githubusercontent.com/soaibsafi/b3fba553635c0a8bb44809cbe18efc1c/raw/e8fe6c18ecf38a4748b4fc2cbde6df055ded981c/tests.sh | bash -s
+        run: curl -s https://gist.githubusercontent.com/soaibsafi/6f1147c79859c7fe44ebfae201286876/raw/a979ef548215e88fd27fb98b04283ad712fb81cb/fm_tests.sh | bash -s
     
       - name: Set up Java 17
         uses: actions/setup-java@v3
@@ -42,6 +42,7 @@ jobs:
         with:
           python-version: 3.8
 
+      # Generate Report
       - run: python generate_report.py
 
       # switch to badges branch
@@ -59,7 +60,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add 'report.md'
           git add '.github/badges/points-bar.svg'
-          git commit -m "Add/Update points bar" || exit 0
+          git add 'report.md'
+          git commit -m "Add/Update report" || exit 0
           git push -f origin badges

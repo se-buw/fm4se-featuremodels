@@ -1,3 +1,10 @@
+#### 💯Points: ![Points bar](../../blob/badges/.github/badges/points-bar.svg)
+
+#### 📝Report: ![Report](../../blob/badges/report.md)
+---
+
+
+
 # Feature Model analysis using limboole
 
 This is a basic template to get started implementing feature model analysis via a translation from a simple FM language to propositional logic formulas in the syntax of Limboole.
@@ -11,8 +18,7 @@ As part of the assignment you will need to implement the TODOs in [FeatureModelT
 1. Install OpenJDK/JDK 
 2. Clone the [repository](https://github.com/se-buw/fm4se-featuremodels.git)
 3. Open in any IDE of your choice (e.g. Eclipse, VS Code, etc.)
-4. Go to `src/main/java/de\buw\fm4se\featuremodels\exec\LimbooleExecutor.java` and change the  `LIMBOOLE_EXE ` according to your system architecture. 
-5. Run `src\main\java\de\buw\fm4se\featuremodels\PrinterExample.java`. You should see the output as - 
+4. Run `src\main\java\de\buw\fm4se\featuremodels\PrinterExample.java`. You should see the output as - 
 ```
 feature car is optional and has 2 children
     feature motor is mandatory and has 2 children in a XOR-group
@@ -23,8 +29,9 @@ feature car is optional and has 2 children
         feature entertainment is optional and has 0 children
 electric REQUIRES heating
 ```
+> Note: Limboole executor is currently avaiable for Windows, Linux and Mac and x86 architecture only. If you are using a different architecture (e.g., arm64, M1) or OS (e.g., BSD), you may need to build the limboole executor from source available at [limboole](https://fmv.jku.at/limboole/)
 
-## Task 1
+## Task 1: Feature Model Translation
 
 [📼 see the code walk-through and explanation of this task](https://www.youtube.com/watch?v=qa08IzWqSQs&list=PLGyeoukah9NYNMJhcHXLjAGN294O2uXCB&index=7)
 
@@ -43,7 +50,7 @@ The translation rules are (as in Lecture Slide 3):
 After a correct translation all JUnit tests relating to consistency checks should pass.
 
 
-## Task 2:
+## Task 2: Analyze mandatory and dead features
 
 [📼 see the code walk-through and explanation of this task](https://www.youtube.com/watch?v=xrLvDfDfRnQ&list=PLGyeoukah9NYNMJhcHXLjAGN294O2uXCB&index=8)
 
@@ -56,7 +63,7 @@ For this, reuse the formula you get from Task 1.
 
 Some very basic test cases exist. Run the test cases. 
 
-## Task 3:
+## Task 3: Product preservation
 
 In this task you implement an analysis relating two feature models. Your code should check whether all products of one feature model are also products of a second feature model.
 
@@ -65,4 +72,4 @@ In this task you implement an analysis relating two feature models. Your code sh
 
 Implement the ``checkAllProductsPreserved(FeatureModel fm1, FeatureModel fm2)`` method in [FeatureModelAnalyzer](https://github.com/se-buw/fm4se-featuremodels/blob/main/src/main/java/de/buw/fm4se/featuremodels/FeatureModelAnalyzer.java) Class which will return ``true`` if and only if all products of ``fm1`` are also products of ``fm2`` (we don't care if ``fm2`` has additional products). 
 
-For this, task reuse the formula you get from Task 1.
+For this, task reuse the formula you get from [Task 1](#task-1-feature-model-translation).

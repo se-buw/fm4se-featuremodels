@@ -38,3 +38,19 @@ tasks.named('test') {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
 }
+
+test {
+    testLogging {
+        events "failed"
+        showStandardStreams = true
+        exceptionFormat "full"
+        showCauses false
+        showExceptions true
+        showStackTraces false
+        showStandardStreams = false
+    }
+    reports {
+        junitXml.enabled = true
+        html.enabled = true
+    } 
+}

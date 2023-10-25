@@ -1,9 +1,9 @@
 {
   "tests": [
     {
-      "name": "LimbooleExecutorTest",
+      "name": "Task 1: Feature Model Translation",
       "setup": "chmod +x gradlew",
-      "run": "./gradlew test --tests '*.LimbooleExecutorTest'",
+      "run": "./gradlew test --tests 'FeatureModelAnalyzerTranslationTest' --console=rich",
       "input": "",
       "output": "",
       "comparison": "included",
@@ -11,9 +11,9 @@
       "points": 1
     },
     {
-      "name": "FeatureModelAnalyzerTest",
+      "name": "Task 2: Analyse Feature Model",
       "setup": "chmod +x gradlew",
-      "run": "./gradlew test --tests '*.FeatureModelAnalyzerTest'",
+      "run": "./gradlew test --tests 'FeatureModelAnalyzerTest' --console=rich",
       "input": "",
       "output": "",
       "comparison": "included",
@@ -21,9 +21,9 @@
       "points": 1
     },
     {
-      "name": "FeatureModelAnalyzerDeadFeatureTest",
+      "name": "Task 2: Analyse Dead Feature",
       "setup": "chmod +x gradlew",
-      "run": "./gradlew test --tests '*.FeatureModelAnalyzerDeadFeatureTest'",
+      "run": "./gradlew test --tests 'FeatureModelAnalyzerDeadFeatureTest' --console=rich",
       "input": "",
       "output": "",
       "comparison": "included",
@@ -31,9 +31,9 @@
       "points": 1
     },
     {
-      "name": "FeatureModelAnalyzerMandatoryFeatureTest",
+      "name": "Task 2: Analyse Mandatory Feature",
       "setup": "chmod +x gradlew",
-      "run": "./gradlew test --tests '*.FeatureModelAnalyzerMandatoryFeatureTest'",
+      "run": "./gradlew test --tests 'FeatureModelAnalyzerMandatoryFeatureTest' --console=rich",
       "input": "",
       "output": "",
       "comparison": "included",
@@ -41,14 +41,24 @@
       "points": 1
     },
     {
-      "name": "FeatureModelAnalyzerTranslationTest",
+      "name": "Task 3: Products Preservation",
       "setup": "chmod +x gradlew",
-      "run": "./gradlew test --tests '*.FeatureModelAnalyzerTranslationTest'",
+      "run": "./gradlew test --tests 'ProductsPreservedTest' --console=rich",
       "input": "",
       "output": "",
       "comparison": "included",
       "timeout": 5,
       "points": 1
+    },
+    {
+      "name": "All tests",
+      "setup": "chmod +x gradlew",
+      "run": "./gradlew test",
+      "input": "",
+      "output": "",
+      "comparison": "excluded",
+      "timeout": 5,
+      "points": 0
     }
   ]
 }
