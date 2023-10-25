@@ -1,6 +1,6 @@
 #### 💯Points: ![Points bar](../../blob/badges/.github/badges/points-bar.svg)
 
-#### 📝Report: ![Report](../../blob/badges/report.md)
+#### 📝 [Report](../../blob/badges/report.md)
 ---
 
 
