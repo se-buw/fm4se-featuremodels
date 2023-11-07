@@ -16,7 +16,7 @@ As part of the assignment you will need to implement the TODOs in [FeatureModelT
 [📼 see the project setup video](https://www.youtube.com/watch?v=40MA55S3F8c&list=PLGyeoukah9NYNMJhcHXLjAGN294O2uXCB&index=6)
 
 1. Install OpenJDK/JDK 
-2. Clone the [repository](https://github.com/se-buw/fm4se-featuremodels.git)
+2. Clone your repository (either created from this template or the classroom)
 3. Open in any IDE of your choice (e.g. Eclipse, VS Code, etc.)
 4. Run `src\main\java\de\buw\fm4se\featuremodels\PrinterExample.java`. You should see the output as - 
 ```
