@@ -9,7 +9,7 @@
 
 This is a basic template to get started implementing feature model analysis via a translation from a simple FM language to propositional logic formulas in the syntax of Limboole.
 
-As part of the assignment you will need to implement the TODOs in [FeatureModelTranslator](https://github.com/se-buw/fm4se-featuremodels/blob/main/src/main/java/de/buw/fm4se/featuremodels/FeatureModelTranslator.java) and [FeatureModelAnalyzer](https://github.com/se-buw/fm4se-featuremodels/blob/main/src/main/java/de/buw/fm4se/featuremodels/FeatureModelAnalyzer.java).
+As part of the assignment you will need to implement the TODOs in [FeatureModelTranslator](src/main/java/de/buw/fm4se/featuremodels/FeatureModelTranslator.java) and [FeatureModelAnalyzer](src/main/java/de/buw/fm4se/featuremodels/FeatureModelAnalyzer.java).
 
 ## Project Setup
 
@@ -35,7 +35,7 @@ electric REQUIRES heating
 
 [📼 see the code walk-through and explanation of this task](https://www.youtube.com/watch?v=qa08IzWqSQs&list=PLGyeoukah9NYNMJhcHXLjAGN294O2uXCB&index=7)
 
-For this task, you need to implement the `translateToFormula(FeatureModel fm)` method in [FeatureModelTranslator](https://github.com/se-buw/fm4se-featuremodels/blob/main/src/main/java/de/buw/fm4se/featuremodels/FeatureModelTranslator.java)  which will return the combined formula in _limboole format_ for a given _Feature Model_.
+For this task, you need to implement the `translateToFormula(FeatureModel fm)` method in [FeatureModelTranslator](src/main/java/de/buw/fm4se/featuremodels/FeatureModelTranslator.java)  which will return the combined formula in _limboole format_ for a given _Feature Model_.
 The translation rules are (as in Lecture Slide 3):
 
 
@@ -55,9 +55,9 @@ After a correct translation all JUnit tests relating to consistency checks shoul
 [📼 see the code walk-through and explanation of this task](https://www.youtube.com/watch?v=xrLvDfDfRnQ&list=PLGyeoukah9NYNMJhcHXLjAGN294O2uXCB&index=8)
 
 
-- Implement the ``deadFeatureNames(FeatureModel fm)`` method in [FeatureModelAnalyzer](https://github.com/se-buw/fm4se-featuremodels/blob/main/src/main/java/de/buw/fm4se/featuremodels/FeatureModelAnalyzer.java) Class which will compute a (potentially empty) list of all dead features. 
+- Implement the ``deadFeatureNames(FeatureModel fm)`` method in [FeatureModelAnalyzer](src/main/java/de/buw/fm4se/featuremodels/FeatureModelAnalyzer.java) Class which will compute a (potentially empty) list of all dead features. 
 
-- Implement the ``mandatoryFeatureNames(FeatureModel fm)`` method in [FeatureModelAnalyzer](https://github.com/se-buw/fm4se-featuremodels/blob/main/src/main/java/de/buw/fm4se/featuremodels/FeatureModelAnalyzer.java) Class which will compute a (potentially empty) list of all mandatory features. 
+- Implement the ``mandatoryFeatureNames(FeatureModel fm)`` method in [FeatureModelAnalyzer](src/main/java/de/buw/fm4se/featuremodels/FeatureModelAnalyzer.java) Class which will compute a (potentially empty) list of all mandatory features. 
 
 For this, reuse the formula you get from Task 1.
 
@@ -70,6 +70,6 @@ In this task you implement an analysis relating two feature models. Your code sh
 - if a feature of the first feature model does not appear in the second, then a product with that feature cannot be a product of the second feature model.
 - if additional features appear in the second feature model, then a product with those features cannot be a product of the first feature model.
 
-Implement the ``checkAllProductsPreserved(FeatureModel fm1, FeatureModel fm2)`` method in [FeatureModelAnalyzer](https://github.com/se-buw/fm4se-featuremodels/blob/main/src/main/java/de/buw/fm4se/featuremodels/FeatureModelAnalyzer.java) Class which will return ``true`` if and only if all products of ``fm1`` are also products of ``fm2`` (we don't care if ``fm2`` has additional products). 
+Implement the ``checkAllProductsPreserved(FeatureModel fm1, FeatureModel fm2)`` method in [FeatureModelAnalyzer](src/main/java/de/buw/fm4se/featuremodels/FeatureModelAnalyzer.java) Class which will return ``true`` if and only if all products of ``fm1`` are also products of ``fm2`` (we don't care if ``fm2`` has additional products). 
 
 For this, task reuse the formula you get from [Task 1](#task-1-feature-model-translation).
