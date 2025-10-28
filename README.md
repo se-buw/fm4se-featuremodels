@@ -29,7 +29,10 @@ feature car is optional and has 2 children
         feature entertainment is optional and has 0 children
 electric REQUIRES heating
 ```
-> Note: Limboole executor is currently avaiable for Windows, Linux and Mac and x86 architecture only. If you are using a different architecture (e.g., arm64, M1) or OS (e.g., BSD), you may need to build the limboole executor from source available at [limboole](https://fmv.jku.at/limboole/)
+
+
+> [!WARNING]  
+> Note: Limboole executor is currently avaiable for Windows, Linux and Mac architecture only. The Actually Portable Executable (APE) tries to detect your OS and architecture automatically. If you have any issues running the limboole executor, change the `LIMBOOLE_EXE` path is [src/main/java/de/buw/fm4se/featuremodels/exec/LimbooleExecutor.java](src/main/java/de/buw/fm4se/featuremodels/exec/LimbooleExecutor.java) to point to the correct limboole binary for your OS and architecture. 
 
 ## Task 1: Feature Model Translation
 
