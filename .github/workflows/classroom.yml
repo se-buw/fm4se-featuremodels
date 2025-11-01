@@ -11,6 +11,7 @@ jobs:
   build:
     name: FM4SE-Exercise-2 | Feature Model
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     if: github.actor != 'github-classroom[bot]'
     steps:
       - name: Checkout Starter Code
